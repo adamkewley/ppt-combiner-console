@@ -1,4 +1,4 @@
-# PPTCombiner #
+# PPTCombiner (Console) #
 
 A console based JScript program that will combine multiple PowerPoint presentations into one. Useful for regular meetings were presenters just combine slides in a serial style. This project is inspired from the excellent <a href="http://code.google.com/p/powerpointjoin/">PPTJoin</a> (updated perl-based version <a href="https://github.com/richardsugg/PowerpointJoin">here</a>) and offers some extra functionality.
 
