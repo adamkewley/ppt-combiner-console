@@ -1,8 +1,7 @@
 # PPTCombiner
 *Combine multiple presentation files into one.*
 
-# ![Screenshot of PPTCombiner](https://github.com/AdamK117/ppt-combiner-console/raw/master/img/screenshot-combiner.png) Presentation Combiner
-*Combine multiple presentation files into one.*
+# ![Screenshot of PPTCombiner](https://github.com/AdamK117/ppt-combiner-console/raw/master/img/screenshot.png)
 
 A console-based program that automates PowerPoint to merge multiple presentation files. Suitable for regular meetings and presentations where a little automation goes a long way. A more straightforward, GUI driven, approach can be found at the [Presentation Combiner](https://github.com/AdamK117/presentation-combiner) project.
 
