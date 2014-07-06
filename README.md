@@ -1,57 +1,47 @@
-# PPTCombiner (Console) #
+# PPTCombiner
+*Combine multiple presentation files into one.*
 
-A console based JScript program that will combine multiple PowerPoint presentations into one. Useful for regular meetings were presenters just combine slides in a serial style. This project is inspired from the excellent <a href="http://code.google.com/p/powerpointjoin/">PPTJoin</a> (updated perl-based version <a href="https://github.com/richardsugg/PowerpointJoin">here</a>) and offers some extra functionality.
+# ![Screenshot of PPTCombiner](https://github.com/AdamK117/ppt-combiner-console/raw/master/img/screenshot-combiner.png) Presentation Combiner
+*Combine multiple presentation files into one.*
 
-## Requirements ##
+A console-based program that automates PowerPoint to merge multiple presentation files. Suitable for regular meetings and presentations where a little automation goes a long way. A more straightforward, GUI driven, approach can be found at the [Presentation Combiner](https://github.com/AdamK117/presentation-combiner) project.
 
-- The script may only by ran on a Windows operating system (uses CScript).
-- Microsoft PowerPoint must be installed
+This project is inspired from the excellent [PPTJoin](http://code.google.com/p/powerpointjoin/) (updated perl-based version [here](https://github.com/richardsugg/PowerpointJoin)) and offers some extra functionality. Presentation files and folders containing them can be used as merge targets with `PPTCombiner`. 
 
-# Usage #
+**You must have PowerPoint installed for `PPTCombiner` to work.**
 
-## Basic Usage ##
+## Quick Start
 
-Basic usage of PPTCombiner involves copying it into a folder containing .ppt's you wish to combine and running it as a Windows clientside JScript file:
+  - Copy `PPTCombiner` into a folder containing the presentation files you want to combine. 
+  - Open a console (`SHIFT+Right Click -> Open Command Window Here`) 
+  - Type `CScript pptCombiner.js` and run it (`Enter`).
+  - The combined presentations will appear as `combined.ppt` in the folder.
 
-    CScript pptCombiner.js
+## Directory Argument
 
-The output will be a file named `combined.ppt` in the folder.
+  - Run `PPTCombiner` with a directory as its argument: `CScript pptCombiner.js C:\path\to\directory\`
+  - The combined presentations will appear as `combined.ppt` in your working directory.
+  - You can also use relative paths, e.g. `CScript pptCombiner.js some\relative\path`.
 
-## Other usage ##
+## Text Argument
 
-### Directory argument ###
-
-PPTCombiner will accept a path to a directory as its argument, all presentation files in the specified directory will be combined into the `combined.ppt` output. There are several allowed input types:
-
-#### Absolute directory path ####
-
-
-    CScript pptCombiner.js C:\some\absolute\path
+*example.txt*
     
-#### Relative directory path ####
-
-
-    CScript pptCombiner.js some\relative\path
-    
-### Text file argument ###
-
-A .txt file containing paths separated by newlines may also supplied. The paths may either be absolute or relative to the supplied .txt file:
-
     C:\An\Absolute\Path.ppt
     A_Relative_File.ppt
     \A\Relative\Path.ppt
     C:\An\Absolute\Directory
     A\Relative\Directory
 
-## Flags ##
+  - Run `PPTCombiner` with the `.txt` as the argument: `CScript pptCombiner.js example.txt`
+  - The combined presentations will appear as `combined.ppt` in your working directory.
 
-PPTCombiner currently has the following flags implemented:
+## Change the Output File
 
-+ /O[path] : Declare the output filename\path.
+  - Use the `/o:` flag to define an output path e.g. `CScript pptCombiner.js /o:C:\output-here.pptx` C:\some-input-directory\
+  - The combined presentations will appear as `output-here.pptx` in the `C:\`.
 
-    - Specify a new filename "/o:"myNewCombinedFilename.ppt"
-    - Specify an absolute path "/o:"C:\CombinedOutput.ppt"
-    - Specify a relative path "/o: "some\subfolder\filename.ppt"
+## Other Flags
 
-+ /? : View the in-terminal readme.
-+ /R : Enable recursive mode. Folder arguments from all sources will be handled recursively by PPTCombiner (including folders specified in text files).
+  - `/?`: View in-terminal readme.
+  - `/R`: Enable recursive mode. `PPTCombiner` will recursively look for any presentation files in any supplied directories.
